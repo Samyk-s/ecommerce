@@ -1,9 +1,10 @@
-import ShopAll from "../../components/shop-all/shopall.component";
+import OurCollection from "../../components/ourcollections/ourcollections";
+
 
 const CollectionPage = () => {
   return (
     <>
-      <ShopAll />
+      <OurCollection/>
     </>
   );
 };
