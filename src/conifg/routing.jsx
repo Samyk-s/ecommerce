@@ -33,23 +33,23 @@ const router = createBrowserRouter([
         element: <LandingPage />,
       },
       {
-        path: "about-us",
+        path: "/about-us",
         element: <AboutUs />,
       },
       {
-        path: "our-collection",
+        path: "/our-collection",
         element: <CollectionPage />,
       },
       {
-        path: "contact",
+        path: "/contact",
         element: <ContactPage />,
       },
       {
-        path: "shop-all",
+        path: "/shop-all",
         element: <ShopAll />,
       },
       {
-        path: "example1",
+        path: "/example1",
         element: <Showproduct />,
       },
       {
