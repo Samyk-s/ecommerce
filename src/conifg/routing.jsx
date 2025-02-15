@@ -23,6 +23,7 @@ import Inbox from "../components/inbox/inbox";
 import CreateProduct from "../components/products/edit.product";
 import EditProduct from "../components/products/EditProduct";
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -52,6 +53,7 @@ const router = createBrowserRouter([
         path: "example1",
         element: <Showproduct/>,
       },
+           
       
       {
         path: "login",
