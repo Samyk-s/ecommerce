@@ -7,7 +7,7 @@ const HomeHeader = () => {
      <Flowbite>     <Navbar fluid rounded>
         <Navbar.Brand href="https://flowbite-react.com">
           <img
-            src="/vite.svg"
+            src="/react.svg"
             className="mr-3 h-6 sm:h-9"
             alt="Flowbite React Logo"
           />
