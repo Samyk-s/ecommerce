@@ -23,7 +23,6 @@ import Inbox from "../components/inbox/inbox";
 import CreateProduct from "../components/products/edit.product";
 import EditProduct from "../components/products/EditProduct";
 
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -51,19 +50,17 @@ const router = createBrowserRouter([
       },
       {
         path: "example1",
-        element: <Showproduct/>,
+        element: <Showproduct />,
       },
-           
-      
       {
         path: "login",
         element: <LoginForm />,
       },
       {
         path: "register",
-        element: <RegisterForm/>
+        element: <RegisterForm />,
       },
-      
+
       {
         path: "*",
         element: <NotFoundPage />,
@@ -103,35 +100,34 @@ const router = createBrowserRouter([
   {
     path: "/admin",
     element: (
-        <ProtectedRoute allowedRoles={["admin"]}>
-            <AdminPageLayout />
-        </ProtectedRoute>
+      <ProtectedRoute allowedRoles={["admin"]}>
+        <AdminPageLayout />
+      </ProtectedRoute>
     ),
     children: [
-        {
-            index: true,
-            element: <AdminLandingPage />,
-        },
-        {
-            path: "product", // relative path, no leading slash
-            element: <ShowProduct />,
-        },
-        {
-          path: "product/create", // New route for creating a product
-          element: <CreateProduct/>
-      },{
+      {
+        index: true,
+        element: <AdminLandingPage />,
+      },
+      {
+        path: "product", // relative path, no leading slash
+        element: <ShowProduct />,
+      },
+      {
+        path: "product/create", // New route for creating a product
+        element: <CreateProduct />,
+      },
+      {
         path: "/admin/product/edit/:productId",
         element: <EditProduct />,
-    },
-        {
-            path: "inbox", // relative path, no leading slash
-            element: <Inbox />,
-        },
-        // Add more admin-specific routes here
+      },
+      {
+        path: "inbox", // relative path, no leading slash
+        element: <Inbox />,
+      },
+      // Add more admin-specific routes here
     ],
-}
-  
-  
+  },
 ]);
 
 const Routing = () => {
