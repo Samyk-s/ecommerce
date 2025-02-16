@@ -12,3 +12,4 @@ export default {
   },
   plugins: [flowbitePlugin],  // Include Flowbite plugin
 };
+

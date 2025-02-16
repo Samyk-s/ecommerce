@@ -1,11 +1,16 @@
 import HomeBanner from "../../components/banner/banner.component";
-import Example from "../../components/example";
+import FeaturedProducts from "../../components/feature/FeaturedProducts";
+
+import Logo from "../../components/logo/logo";
+import Popup from "../../components/popup/popup";
 
 const LandingPage = () => {
   return (
     <>
+    <Popup/>
       <HomeBanner />
-      <Example />
+    <FeaturedProducts/>
+     <Logo/>
     </>
   );
 };

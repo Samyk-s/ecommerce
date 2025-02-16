@@ -40,7 +40,6 @@ const HomeHeader = () => {
           </Navbar.Link>
 
           <Navbar.Link href="/shop-all">Shop ALL</Navbar.Link>
-          <Navbar.Link href="/our-collection">Our Collections</Navbar.Link>
           <Navbar.Link href="/contact">Contact</Navbar.Link>
           <Navbar.Link href="/about-us">About</Navbar.Link>
           

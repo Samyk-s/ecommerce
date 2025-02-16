@@ -4,7 +4,6 @@ import "react-toastify/dist/ReactToastify.css"; // Import the CSS for toastify
 import HomePageLayout from "../pages/layout/Homepagelayout";
 import LandingPage from "../pages/LandingPage/Home.page";
 import AboutUs from "../pages/about-us/about-us.page";
-import CollectionPage from "../pages/our-collections/collection.page";
 import ShopAll from "../components/shop-all/shopall.component";
 import ContactPage from "../pages/contact/contact.page";
 import NotFoundPage from "../pages/error/notfound";
@@ -17,7 +16,6 @@ import AdminPageLayout from "../pages/layout/Adminpagelayout";
 import AdminLandingPage from "../pages/LandingPage/Admin.Home";
 import ProtectedRoute from "../components/auth/login/protectedroute";
 import RegisterForm from "../components/auth/register/register.auth";
-import Showproduct from "../components/example1";
 import ShowProduct from "../components/products/show.product";
 import Inbox from "../components/inbox/inbox";
 import CreateProduct from "../components/products/edit.product";
@@ -36,10 +34,7 @@ const router = createBrowserRouter([
         path: "/about-us",
         element: <AboutUs />,
       },
-      {
-        path: "/our-collection",
-        element: <CollectionPage />,
-      },
+      
       {
         path: "/contact",
         element: <ContactPage />,
@@ -47,10 +42,6 @@ const router = createBrowserRouter([
       {
         path: "/shop-all",
         element: <ShopAll />,
-      },
-      {
-        path: "/example1",
-        element: <Showproduct />,
       },
       {
         path: "login",
