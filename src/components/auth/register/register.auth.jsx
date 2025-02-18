@@ -66,8 +66,8 @@ const RegisterForm = () => {
               <input type="password" name="passwordConfirmation" placeholder="Confirm Password" value={formData.passwordConfirmation} onChange={handleChange} required className="w-full p-2 border rounded" />
               <input type="text" name="address" placeholder="Address" value={formData.address} onChange={handleChange} required className="w-full p-2 border rounded" />
               <div>
-                <label className="block text-sm font-medium">Gender</label>
-                <div className="flex gap-4">
+                <label className="block text-sm font-medium dark:text-white">Gender</label>
+                <div className="flex gap-4 dark:text-white">
                   <label><input type="radio" name="gender" value="male" onChange={handleChange} required /> Male</label>
                   <label><input type="radio" name="gender" value="female" onChange={handleChange} required /> Female</label>
                   <label><input type="radio" name="gender" value="other" onChange={handleChange} required /> Other</label>
@@ -78,7 +78,7 @@ const RegisterForm = () => {
                 <option value="seller">Seller</option>
               </select>
               <input type="text" name="telephone" placeholder="Telephone" value={formData.telephone} onChange={handleChange} required className="w-full p-2 border rounded" />
-              <input type="file" name="profileImage" accept="image/*" onChange={handleChange} required className="w-full p-2 border rounded" />
+              <input type="file" name="profileImage" accept="image/*" onChange={handleChange} required className="w-full p-2 border rounded dark:text-white" />
               <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded">Register</button>
             </form>
           </div>
