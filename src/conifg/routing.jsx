@@ -20,6 +20,7 @@ import ShowProduct from "../components/products/show.product";
 import Inbox from "../components/inbox/inbox";
 import CreateProduct from "../components/products/edit.product";
 import EditProduct from "../components/products/EditProduct";
+import Overview from "../pages/overview/overview";
 
 const router = createBrowserRouter([
   {
@@ -34,7 +35,7 @@ const router = createBrowserRouter([
         path: "/about-us",
         element: <AboutUs />,
       },
-      
+
       {
         path: "/contact",
         element: <ContactPage />,
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
       {
         path: "register",
         element: <RegisterForm />,
+      },
+      {
+        path: "overview",
+        element: <Overview />,
       },
 
       {
