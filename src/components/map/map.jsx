@@ -34,7 +34,7 @@ const MyMaps = () => {
     <div style={{ height: '40vh' }}>
       <MapContainer
         center={userLocation}
-        zoom={3}
+        zoom={14}
         scrollWheelZoom={false}
         style={{ height: '100%' }}
       >
