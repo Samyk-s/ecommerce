@@ -1,11 +1,11 @@
 import { Button, Navbar } from "flowbite-react";
-import { DarkThemeToggle, Flowbite } from "flowbite-react";
+
 import { Link } from 'react-router-dom';
 
 const HomeHeader = () => {
   return (
     <>
-      <Flowbite>
+      
         <Navbar fluid rounded>
           <Navbar.Brand href="https://flowbite-react.com">
             <img
@@ -19,7 +19,7 @@ const HomeHeader = () => {
           </Navbar.Brand>
           <div className="flex md:order-2">
             <div className="flex flex-wrap gap-2">
-              <DarkThemeToggle />
+           
               <Link to="/login">
                 <Button color="blue" pill>
                   Login
@@ -44,7 +44,7 @@ const HomeHeader = () => {
             <Navbar.Link href="/about-us">About</Navbar.Link>
           </Navbar.Collapse>
         </Navbar>
-      </Flowbite>
+    
     </>
   );
 };
