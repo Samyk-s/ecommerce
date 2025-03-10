@@ -1,17 +1,12 @@
-// tailwind.config.js
-import flowbitePlugin from 'flowbite/plugin';
-
+/** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    './index.html',
-    './src/**/*.{js,ts,jsx,tsx}',
-    './node_modules/flowbite/**/*.js', // Include Flowbite components
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "node_modules/flowbite-react/lib/esm/**/*.js",
   ],
-  darkMode: 'class', // Enables dark mode via a class
   theme: {
-    extend: {
-      // You can add custom dark mode colors, spacing, or other theme configurations here
-    },
+    extend: {},
   },
-  plugins: [flowbitePlugin], // Include Flowbite plugin
+  plugins: [require("flowbite/plugin")],
 };

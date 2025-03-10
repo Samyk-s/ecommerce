@@ -21,6 +21,7 @@ import Inbox from "../components/inbox/inbox";
 import CreateProduct from "../components/products/edit.product";
 import EditProduct from "../components/products/EditProduct";
 import Overview from "../pages/overview/overview";
+import "flowbite/dist/flowbite.min.css"
 
 const router = createBrowserRouter([
   {
