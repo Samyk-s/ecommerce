@@ -1,8 +1,8 @@
-
 import Popup from "../popup/popup";
 import Popup1 from "../popup/popup1";
 import banner from "/banner.jpg";
-import { Link } from "react-router-dom";  // Import Link for routing
+import { Link } from "react-router-dom";
+
 
 const HomeBanner = () => {
   return (
@@ -14,11 +14,10 @@ const HomeBanner = () => {
           backgroundPosition: "center 38%",
         }}
       >
-        {/* Button Section */}
         <button
           style={{
             position: "absolute",
-            bottom: "380px", // Adjusted to push it up from the bottom
+            bottom: "380px",
             left: "200px", // Left position
             padding: "10px 40px",
             border: "2px solid black", // Black border
@@ -27,36 +26,39 @@ const HomeBanner = () => {
             fontSize: "16px", // Font size
             fontWeight: "bold", // Font weight
             cursor: "pointer", // Pointer cursor on hover
-            transition: "background-color 0.3s ease, color 0.3s ease", // Smooth transition for background and text color on hover
+            transition: "background 0.3s ease, color 0.3s ease", // Smooth transition for background and text color
           }}
           onMouseEnter={(e) => {
-            e.target.style.backgroundColor = "black"; // Change background to black
+            e.target.style.background =
+              "linear-gradient(to right, #000000 50%, #2c3e50 100%)"; // Delayed gradient from black to a dark gray
             e.target.style.color = "white"; // Change text to white
           }} // Hover effect
           onMouseLeave={(e) => {
-            e.target.style.backgroundColor = "transparent"; // Reset background to transparent
+            e.target.style.background = "transparent"; // Reset background to transparent
             e.target.style.color = "black"; // Reset text color to black
           }} // Hover effect reset
         >
-          <Link to="/shop-all" style={{ textDecoration: "none", color: "inherit" }}>
+          <Link
+            to="/shop-all"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
             Shop All
           </Link>
         </button>
 
-        {/* Popup Section */}
         <div
           style={{
             position: "absolute",
-            top: "50%", // Vertically center the popup container
-            right: "20px", // Push to the right edge with some padding
-            transform: "translateY(-50%)", // Center vertically
-            display: "flex", // Use flexbox to arrange the popups
-            flexDirection: "column", // Stack popups vertically
-            gap: "20px", // Add a gap between the popups (adjust as needed)
+            top: "50%",
+            right: "20px",
+            transform: "translateY(-50%)",
+            display: "flex",
+            flexDirection: "column",
+            gap: "20px",
           }}
         >
-          <Popup/> {/* First Popup */}
-          <Popup1/> {/* Second Popup */}
+          <Popup />
+          <Popup1 />
         </div>
       </div>
     </>
