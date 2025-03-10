@@ -17,7 +17,7 @@ const Popup = () => {
                 className="w-32 h-32 object-contain mb-2" // Adjust size as needed
               />
               <span className="text-xl font-semibold text-gray-900 dark:text-white">
-                $49.99 {/* Replace with dynamic price */}
+                $249.99 {/* Replace with dynamic price */}
               </span>
             </div>
             <div className="flex gap-2">

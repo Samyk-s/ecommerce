@@ -12,45 +12,46 @@ const HomeHeader = () => {
     }
   }, []);
   return (
-    <><Flowbite>
-      <Navbar fluid rounded>
-        <Navbar.Brand href="/">
-          <img
-            src="/react.svg"
-            className="mr-3 h-6 sm:h-9"
-            alt="Flowbite React Logo"
-          />
-          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-            Ecommerce Store
-          </span>
-        </Navbar.Brand>
-        <div className="flex md:order-2">
-          <div className="flex flex-wrap gap-2">
-          <DarkThemeToggle />
-            <Link to="/login">
-              <Button color="blue" pill>
-                Login
-              </Button>
-            </Link>
+    <>
+      <Flowbite>
+        <Navbar fluid rounded>
+          <Navbar.Brand href="/">
+            <img
+              src="/react.svg"
+              className="mr-3 h-6 sm:h-9"
+              alt="Flowbite React Logo"
+            />
+            <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+              Ecommerce Store
+            </span>
+          </Navbar.Brand>
+          <div className="flex md:order-2">
+            <div className="flex flex-wrap gap-2">
+              <DarkThemeToggle />
+              <Link to="/login">
+                <Button className="bg-gray-900 text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-300 rounded">
+                  Login
+                </Button>
+              </Link>
 
-            <Link to="/register">
-              <Button color="blue" pill>
-                Register
-              </Button>
-            </Link>
+              <Link to="/register">
+                <Button className=" bg-gray-900 text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-300 rounded">
+                  Register
+                </Button>
+              </Link>
+            </div>
           </div>
-        </div>
 
-        {/* Collapsing Navbar links */}
-        <Navbar.Collapse>
-          <Navbar.Link href="/" active style={{ color: "red" }}>
-            Home
-          </Navbar.Link>
-          <Navbar.Link href="/shop-all">Shop ALL</Navbar.Link>
-          <Navbar.Link href="/contact">Contact</Navbar.Link>
-          <Navbar.Link href="/about-us">About</Navbar.Link>
-        </Navbar.Collapse>
-      </Navbar>
+          {/* Collapsing Navbar links */}
+          <Navbar.Collapse>
+            <Navbar.Link href="/" active style={{ color: "red" }}>
+              Home
+            </Navbar.Link>
+            <Navbar.Link href="/shop-all">Shop ALL</Navbar.Link>
+            <Navbar.Link href="/contact">Contact</Navbar.Link>
+            <Navbar.Link href="/about-us">About</Navbar.Link>
+          </Navbar.Collapse>
+        </Navbar>
       </Flowbite>
     </>
   );
