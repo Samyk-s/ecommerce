@@ -1,5 +1,6 @@
 import { Button, Navbar } from "flowbite-react";
 import { Link } from "react-router-dom";
+import Clockcard from "../clock/clock";
 
 const HomeHeader = () => {
   return (
@@ -17,6 +18,7 @@ const HomeHeader = () => {
         </Navbar.Brand>
         <div className="flex md:order-2">
           <div className="flex flex-wrap gap-2">
+            <Clockcard />
             <Link to="/login">
               <Button className="bg-gray-900 text-white rounded">
                 Login

@@ -9,7 +9,7 @@ const LandingPage = () => {
       <HomeBanner />
 
       <FeaturedProducts />
-
+    
       <Logo />
     </>
   );
