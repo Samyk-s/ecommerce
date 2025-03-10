@@ -8,7 +8,7 @@ const HomeHeader = () => {
       <Navbar fluid rounded>
         <Navbar.Brand href="/" className="flex items-center">
           <img
-            src="/react.svg"
+            src="/logo.jpg"
             className="mr-3 h-6 sm:h-9"
             alt="Flowbite React Logo"
           />
