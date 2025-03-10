@@ -54,11 +54,11 @@ const HomeBanner = () => {
           fontSize: "16px", // Font size
           fontWeight: "bold", // Font weight
           cursor: "pointer", // Pointer cursor on hover
-          transition: "background 0.3s ease, color 0.3s ease", // Smooth transition for background and text color
+          transition: "background 0.7s ease, color 1.3s ease", // Smooth transition for background and text color
         }}
         onMouseEnter={(e) => {
           e.target.style.background =
-            "linear-gradient(to right, #000000 50%, #2c3e50 100%)"; // Delayed gradient from black to a dark gray
+            "linear-gradient(to right, #000000 4%, #2c3e50 100%)"; // Delayed gradient from black to a dark gray
           e.target.style.color = "white"; // Change text to white
         }} // Hover effect
         onMouseLeave={(e) => {
@@ -86,12 +86,8 @@ const HomeBanner = () => {
         }}
       >
         {/* Apply inline style for the gradual fade-in effect */}
-        <div style={popupStyle}>
-          {showPopup && <Popup />}
-        </div>
-        <div style={popup1Style}>
-          {showPopup1 && <Popup1 />}
-        </div>
+        <div style={popupStyle}>{showPopup && <Popup />}</div>
+        <div style={popup1Style}>{showPopup1 && <Popup1 />}</div>
       </div>
     </div>
   );
