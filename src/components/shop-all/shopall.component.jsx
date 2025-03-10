@@ -88,7 +88,7 @@ const ShopAll = () => {
         </div>
         <div className="pt-6">
           <div className="mb-4 flex items-center justify-between gap-4">
-            <span className="me-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-300"> Up to 35% off </span>
+            <span className="me-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-yellow-300"> Up to 35% off </span>
 
             <div className="flex items-center justify-end gap-1">
               <button type="button" data-tooltip-target="tooltip-quick-look" className="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
@@ -183,7 +183,7 @@ const ShopAll = () => {
 
         <div className="pt-6">
           <div className="mb-4 flex items-center justify-between gap-4">
-            <span className="me-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-300"> Up to 15% off </span>
+            <span className="me-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-yellow-300"> Up to 15% off </span>
 
             <div className="flex items-center justify-end gap-1">
               <button type="button" data-tooltip-target="tooltip-quick-look-2" className="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
@@ -284,7 +284,7 @@ const ShopAll = () => {
 
         <div className="pt-6">
           <div className="mb-4 flex items-center justify-between gap-4">
-            <span className="me-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-300"> Up to 35% off </span>
+            <span className="me-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-yellow-300"> Up to 35% off </span>
 
             <div className="flex items-center justify-end gap-1">
               <button type="button" data-tooltip-target="tooltip-quick-look-3" className="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
@@ -379,7 +379,7 @@ const ShopAll = () => {
 
         <div className="pt-6">
           <div className="mb-4 flex items-center justify-between gap-4">
-            <span className="me-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-300"> Up to 10% off </span>
+            <span className="me-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-yellow-300"> Up to 10% off </span>
 
             <div className="flex items-center justify-end gap-1">
               <button type="button" data-tooltip-target="tooltip-quick-look-4" className="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
@@ -474,7 +474,7 @@ const ShopAll = () => {
 
         <div className="pt-6">
           <div className="mb-4 flex items-center justify-between gap-4">
-            <span className="me-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-300"> Up to 10% off </span>
+            <span className="me-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-yellow-300"> Up to 10% off </span>
 
             <div className="flex items-center justify-end gap-1">
               <button type="button" data-tooltip-target="tooltip-quick-look-5" className="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
@@ -575,7 +575,7 @@ const ShopAll = () => {
 
         <div className="pt-6">
           <div className="mb-4 flex items-center justify-between gap-4">
-            <span className="me-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-300"> Up to 5% off </span>
+            <span className="me-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-yellow-300"> Up to 5% off </span>
 
             <div className="flex items-center justify-end gap-1">
               <button type="button" data-tooltip-target="tooltip-quick-look-6" className="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
@@ -670,7 +670,7 @@ const ShopAll = () => {
 
         <div className="pt-6">
           <div className="mb-4 flex items-center justify-between gap-4">
-            <span className="me-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-300"> Up to 20% off </span>
+            <span className="me-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-yellow-300"> Up to 20% off </span>
 
             <div className="flex items-center justify-end gap-1">
               <button type="button" data-tooltip-target="tooltip-quick-look-7" className="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
@@ -764,7 +764,7 @@ const ShopAll = () => {
         </div>
         <div className="pt-6">
           <div className="mb-4 flex items-center justify-between gap-4">
-            <span className="me-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-300"> Up to 35% off </span>
+            <span className="me-2 rounded bg-primary-100 px-2.5 py-0.5 text-xs font-medium text-primary-800 dark:bg-primary-900 dark:text-yellow-300"> Up to 35% off </span>
 
             <div className="flex items-center justify-end gap-1">
               <button type="button" data-tooltip-target="tooltip-quick-look-8" className="rounded-lg p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">
@@ -854,7 +854,7 @@ const ShopAll = () => {
       <button type="button" className="rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700">Show more</button>
     </div>
   </div>
-  <form action="#" method="get" id="filterModal" tabindex="-1" aria-hidden="true" className="fixed left-0 right-0 top-0 z-50 hidden h-modal w-full overflow-y-auto overflow-x-hidden p-4 md:inset-0 md:h-full">
+  <form action="#" method="get" id="filterModal" tabIndex="-1" aria-hidden="true" className="fixed left-0 right-0 top-0 z-50 hidden h-modal w-full overflow-y-auto overflow-x-hidden p-4 md:inset-0 md:h-full">
     <div className="relative h-full w-full max-w-xl md:h-auto">
       <div className="relative rounded-lg bg-white shadow dark:bg-gray-800">
         <div className="flex items-start justify-between rounded-t p-4 md:p-5">

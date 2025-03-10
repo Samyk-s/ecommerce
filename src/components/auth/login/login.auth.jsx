@@ -40,11 +40,19 @@ const LoginForm = () => {
 
         toast.success("Login successful!", {
           onClose: () => {
+            console.log("Toast closed, navigating..."); // Debugging line
             const destination = location.state?.from || `/${role}`;
+            console.log("Navigating to:", destination); // Debugging line
             navigate(destination);
           },
           autoClose: 2000,
         });
+
+        // Alternative approach using setTimeout
+        // setTimeout(() => {
+        //   const destination = location.state?.from || `/${role}`;
+        //   navigate(destination);
+        // }, 2000);
       } else {
         toast.error(data.message || "Login failed");
       }
