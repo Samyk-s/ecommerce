@@ -39,7 +39,7 @@ const HomeBanner = () => {
       className="relative w-full h-screen bg-cover bg-center"
       style={{
         backgroundImage: `url(${banner})`,
-        backgroundPosition: "center 47%",
+        backgroundPosition: "center 38%",
       }}
     >
       <button
