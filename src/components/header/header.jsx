@@ -16,7 +16,7 @@ const HomeHeader = () => {
             Ecommerce Store
           </span>
         </Navbar.Brand>
-        
+
         <div className="flex md:order-2 items-center gap-4">
           {/* Clockcard will be on the left side on smaller screens and aligned on the right on larger screens */}
           <div className="hidden md:block">
@@ -40,10 +40,18 @@ const HomeHeader = () => {
 
         {/* Collapsing Navbar links */}
         <Navbar.Collapse>
-          <Navbar.Link href="/" className="text-sm sm:text-base">Home</Navbar.Link>
-          <Navbar.Link href="/shop-all" className="text-sm sm:text-base">Shop ALL</Navbar.Link>
-          <Navbar.Link href="/contact" className="text-sm sm:text-base">Contact</Navbar.Link>
-          <Navbar.Link href="/about-us" className="text-sm sm:text-base">About</Navbar.Link>
+          <Navbar.Link href="/" className="text-sm sm:text-base">
+            Home
+          </Navbar.Link>
+          <Navbar.Link href="/shop-all" className="text-sm sm:text-base">
+            Shop ALL
+          </Navbar.Link>
+          <Navbar.Link href="/contact" className="text-sm sm:text-base">
+            Contact
+          </Navbar.Link>
+          <Navbar.Link href="/about-us" className="text-sm sm:text-base">
+            About
+          </Navbar.Link>
         </Navbar.Collapse>
       </Navbar>
     </>
