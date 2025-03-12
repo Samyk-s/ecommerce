@@ -1,6 +1,8 @@
 import { Button, Navbar } from "flowbite-react";
 import { Link } from "react-router-dom";
 import Clockcard from "../clock/clock";
+import DateCard from "../date/date";
+import DayCard from "../Day/Day";
 
 const HomeHeader = () => {
   return (
@@ -18,9 +20,11 @@ const HomeHeader = () => {
         </Navbar.Brand>
 
         <div className="flex md:order-2 items-center gap-4">
-          {/* Clockcard will be on the left side on smaller screens and aligned on the right on larger screens */}
-          <div className="hidden md:block">
+          {/* Horizontal Layout for Clock, Date, and Day */}
+          <div className="hidden md:flex gap-4 items-center">
             <Clockcard />
+            <DateCard />
+            <DayCard />
           </div>
 
           <div className="flex flex-wrap gap-2">

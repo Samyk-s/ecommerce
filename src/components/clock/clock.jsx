@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 
+// Clockcard for Time
 const Clockcard = () => {
   const [time, setTime] = useState(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
 
   useEffect(() => {
     const interval = setInterval(() => {
-      // Update time every minute to avoid unnecessary second updates
       setTime(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
     }, 60000); // Update every 60 seconds
 
