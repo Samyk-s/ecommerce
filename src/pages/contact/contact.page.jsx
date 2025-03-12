@@ -1,5 +1,6 @@
- // Ensure the correct path to MyMaps component
+// Ensure the correct path to MyMaps component
 
+import ContactMeBox from "../../components/contact/contactme";
 import MyMaps from "../../components/map/map";
 
 const ContactPage = () => {
@@ -39,7 +40,9 @@ const ContactPage = () => {
               </svg>
             </a>
           </div>
+          
         </div>
+        <ContactMeBox />
       </section>
     </>
   );
