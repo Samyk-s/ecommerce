@@ -1,13 +1,18 @@
 import HomeBanner from "../../components/banner/banner.component";
-import FeaturedProducts from "../../components/feature/FeaturedProducts";
+import Featuredproducts from "../../components/feature/FeaturedProducts";
 
 
 const LandingPage = () => {
   return (
     <>
       <HomeBanner />
+      <Featuredproducts />
+      
+      
 
-      <FeaturedProducts />
+      
+
+      
     
      
     </>

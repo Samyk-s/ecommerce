@@ -5,14 +5,16 @@ const Popup = () => {
     <>
       <Toast className="bg-transparent">
         <div className="flex items-start">
-          <div className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-cyan-100 text-cyan-500 dark:bg-cyan-900 dark:text-cyan-300"></div>
+          <div className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-transparent">
+            {/* You can also remove the classes if you want it completely invisible */}
+          </div>
           <div className="ml-3 text-sm font-normal">
             <span className="mb-3 text-sm font-semibold text-gray-900 dark:text-white">
               Apple Watch SE GPS 40
             </span>
             <div className="mb-2 text-sm font-normal flex flex-col items-center">
-              <img 
-                src="/AppleWatchSE.jpg"  // Replace with your image path
+              <img
+                src="/AppleWatchSE.jpg" // Replace with your image path
                 alt="Product"
                 className="w-32 h-32 object-contain mb-2" // Adjust size as needed
               />

@@ -3,7 +3,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; // Import the CSS for toastify
 import HomePageLayout from "../pages/layout/Homepagelayout";
 import LandingPage from "../pages/LandingPage/Home.page";
-import AboutUs from "../pages/about-us/about-us.page";
+
 import ShopAll from "../components/shop-all/shopall.component";
 import ContactPage from "../pages/contact/contact.page";
 import NotFoundPage from "../pages/error/notfound";
@@ -31,10 +31,6 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <LandingPage />,
-      },
-      {
-        path: "/about-us",
-        element: <AboutUs />,
       },
 
       {

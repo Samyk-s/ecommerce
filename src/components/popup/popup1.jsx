@@ -5,7 +5,10 @@ const Popup1 = () => {
     <>
       <Toast className="bg-transparent">
         <div className="flex items-start">
-          <div className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-cyan-100 text-cyan-500 dark:bg-cyan-900 dark:text-cyan-300"></div>
+          {/* Making the icon container invisible */}
+          <div className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-transparent">
+            {/* Icon removed or made invisible */}
+          </div>
           <div className="ml-3 text-sm font-normal">
             <span className="mb-1 text-sm font-semibold text-gray-900 dark:text-white">
               PlayStation5 Console

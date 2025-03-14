@@ -1,60 +1,164 @@
+// src/components/FeaturedProducts.jsx
+import { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link component from react-router-dom
+
+const products = [
+  {
+    id: 1,
+    name: 'Apple iMac 27"',
+    price: '$1,799.00',
+    imageUrl: '/AppleiMac 27.jpg',
+    rating: 5,
+  },
+  {
+    id: 2,
+    name: 'Product 2',
+    price: '$35.00',
+    imageUrl: '/image1.jpg',
+    rating: 4,
+  },
+  {
+    id: 3,
+    name: 'Product 3',
+    price: '$50.00',
+    imageUrl: '/image2.jpg',
+    rating: 3,
+  },
+  {
+    id: 4,
+    name: 'Product 4',
+    price: '$45.00',
+    imageUrl: '/image3.jpg',
+    rating: 4,
+  },
+  {
+    id: 5,
+    name: 'Product 5',
+    price: '$25.00',
+    imageUrl: '/image4.jpg',
+    rating: 2,
+  },
+  {
+    id: 6,
+    name: 'Product 6',
+    price: '$15.00',
+    imageUrl: '/image5.jpg',
+    rating: 3,
+  },
+];
+
 const FeaturedProducts = () => {
-  // Example data for featured products
-  const featuredProducts = [
-    {
-      id: 1,
-      name: 'Product 1',
-      price: '$29.99',
-      image: 'image3.jpg',
-    },
-    {
-      id: 2,
-      name: 'Product 2',
-      price: '$49.99',
-      image: 'image4.jpg',
-    },
-    {
-      id: 3,
-      name: 'Product 3',
-      price: '$19.99',
-      image: 'image2.jpg',
-    },
-    {
-      id: 3,
-      name: 'Product 3',
-      price: '$19.99',
-      image: 'image2.jpg',
-    },
-    
-  ];
+  const [hoveredRating, setHoveredRating] = useState(null);
+
+  const handleStarClick = (productId, rating) => {
+    console.log(`Product ${productId} rated ${rating} stars`);
+  };
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h2 className="text-3xl font-bold text-center mb-8 dark:text-white">Featured Products</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {featuredProducts.map((product) => (
-          <div
+    <>
+      <h2 style={{ textAlign: 'center', fontSize: '2rem', fontWeight: '700', color: '#333', marginBottom: '20px' }}>
+        Explore Our Best-Selling <span style={{ color: '#ff5722' }}>Featured Products</span> – Shop Now!
+      </h2>
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(6, 1fr)', // 6 items per row
+          gap: '20px',
+          marginTop: '20px',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          maxWidth: '1200px',
+        }}
+      >
+        {products.map((product) => (
+          <Link
             key={product.id}
-            className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            to={`/product/${product.id}`} // Link to the product detail page
+            style={{
+              textDecoration: 'none', // Remove underline from the link
+              display: 'block', // Make the entire card a clickable block
+            }}
           >
-            <img
-              src={product.image}
-              alt={product.name}
-              className="w-full h-30" // Increased height to h-60
-            />
-            <div className="p-4">
-              <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
-              <p className="text-lg font-bold text-blue-600 mb-4">
-                {product.price}
-              </p>
-              <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-300">
-                Add to Cart
-              </button>
+            <div
+              style={{
+                border: '1px solid #ddd',
+                borderRadius: '8px',
+                padding: '10px',
+                textAlign: 'center',
+                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+                backgroundColor: '#fff',
+                height: '290px',
+                width: '180px',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                overflow: 'hidden', // Prevent overflow from card borders
+              }}
+            >
+              {/* Image with hover effect */}
+              <div
+                style={{
+                  height: '200px',
+                  overflow: 'hidden',
+                  borderRadius: '8px',
+                  position: 'relative', // To position the overlay absolutely
+                  transition: 'all 0.3s ease', // Smooth transition for the hover effect
+                }}
+              >
+                <img
+                  src={product.imageUrl}
+                  alt={product.name}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    transition: 'all 0.3s ease', // Smooth transition for the image on hover
+                  }}
+                />
+                {/* Overlay Effect */}
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    right: 0,
+                    bottom: 0,
+                    backgroundColor: 'rgba(0, 0, 0, 0.4)', // Dark gray translucent overlay
+                    opacity: 0,
+                    transition: 'opacity 0.3s ease',
+                  }}
+                />
+              </div>
+              <h3 style={{ margin: '10px 0' }}>{product.name}</h3>
+              <p>{product.price}</p>
+
+              {/* Star Rating Section */}
+              <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <span
+                    key={star}
+                    onClick={() => handleStarClick(product.id, star)} // Handle star click
+                    onMouseEnter={() => setHoveredRating(star)} // Set hovered rating
+                    onMouseLeave={() => setHoveredRating(null)} // Reset on mouse leave
+                    style={{
+                      cursor: 'pointer',
+                      fontSize: '24px',
+                      color:
+                        hoveredRating >= star || product.rating >= star
+                          ? '#ffc107' // Yellow for filled stars
+                          : '#ddd', // Gray for empty stars
+                      transition: 'color 0.2s',
+                    }}
+                  >
+                    ★
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
-    </div>
+    </>
   );
 };
 
