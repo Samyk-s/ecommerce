@@ -1,5 +1,3 @@
-// src/components/FeaturedProducts.jsx
-import { useState } from 'react';
 import { Link } from 'react-router-dom'; // Import Link component from react-router-dom
 
 const products = [
@@ -48,12 +46,6 @@ const products = [
 ];
 
 const FeaturedProducts = () => {
-  const [hoveredRating, setHoveredRating] = useState(null);
-
-  const handleStarClick = (productId, rating) => {
-    console.log(`Product ${productId} rated ${rating} stars`);
-  };
-
   return (
     <>
       <h2 style={{ textAlign: 'center', fontSize: '2rem', fontWeight: '700', color: '#333', marginBottom: '20px' }}>
@@ -115,7 +107,7 @@ const FeaturedProducts = () => {
                     transition: 'all 0.3s ease', // Smooth transition for the image on hover
                   }}
                 />
-                {/* Overlay Effect */}
+                {/* Darkening Overlay Effect */}
                 <div
                   style={{
                     position: 'absolute',
@@ -127,24 +119,21 @@ const FeaturedProducts = () => {
                     opacity: 0,
                     transition: 'opacity 0.3s ease',
                   }}
+                  className="overlay"
                 />
               </div>
               <h3 style={{ margin: '10px 0' }}>{product.name}</h3>
               <p>{product.price}</p>
 
-              {/* Star Rating Section */}
+              {/* Static Star Rating Section */}
               <div style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
                 {[1, 2, 3, 4, 5].map((star) => (
                   <span
                     key={star}
-                    onClick={() => handleStarClick(product.id, star)} // Handle star click
-                    onMouseEnter={() => setHoveredRating(star)} // Set hovered rating
-                    onMouseLeave={() => setHoveredRating(null)} // Reset on mouse leave
                     style={{
-                      cursor: 'pointer',
                       fontSize: '24px',
                       color:
-                        hoveredRating >= star || product.rating >= star
+                        product.rating >= star
                           ? '#ffc107' // Yellow for filled stars
                           : '#ddd', // Gray for empty stars
                       transition: 'color 0.2s',
@@ -158,6 +147,20 @@ const FeaturedProducts = () => {
           </Link>
         ))}
       </div>
+
+      {/* Add hover effect using JavaScript for dark overlay */}
+      <style>
+        {`
+          .overlay {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+          }
+
+          .overlay:hover {
+            opacity: 1;
+          }
+        `}
+      </style>
     </>
   );
 };

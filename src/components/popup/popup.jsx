@@ -6,12 +6,15 @@ const Popup = () => {
       <Toast className="bg-transparent">
         <div className="flex items-start">
           <div className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-transparent">
-            {/* You can also remove the classes if you want it completely invisible */}
+            {/* Optional Icon for Toast */}
           </div>
           <div className="ml-3 text-sm font-normal">
+            {/* Product Name */}
             <span className="mb-3 text-sm font-semibold text-gray-900 dark:text-white">
               Apple Watch SE GPS 40
             </span>
+            
+            {/* Product Image and Price */}
             <div className="mb-2 text-sm font-normal flex flex-col items-center">
               <img
                 src="/AppleWatchSE.jpg" // Replace with your image path
@@ -22,7 +25,10 @@ const Popup = () => {
                 $249.99 {/* Replace with dynamic price */}
               </span>
             </div>
+
+            {/* Action Buttons */}
             <div className="flex gap-2">
+              {/* Buy Now Button */}
               <div className="w-auto">
                 <Button
                   size="xs"
@@ -31,6 +37,8 @@ const Popup = () => {
                   Buy Now
                 </Button>
               </div>
+
+              {/* Add to Cart Button */}
               <div className="w-auto">
                 <Button color="light" size="xs">
                   Add to Cart
@@ -38,6 +46,7 @@ const Popup = () => {
               </div>
             </div>
           </div>
+          {/* Toast Toggle (close button) */}
           <Toast.Toggle />
         </div>
       </Toast>

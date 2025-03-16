@@ -1,33 +1,66 @@
 const BannerOne = () => {
   return (
-    <div className="relative overflow-hidden bg-white my-16">
-      <div className="pt-16 pb-80 sm:pt-24 sm:pb-40 lg:pt-40 lg:pb-48">
-        <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
-          <div className="sm:max-w-lg">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Summer styles are finally here
-            </h1>
-            <p className="mt-4 text-xl text-gray-500">
-              This year, our new summer collection will shelter you from the
-              harsh elements of a world that doesn&apos;t care if you live or die.
-            </p>
+    <div className="flex items-center justify-between w-full h-screen bg-gray-100 p-8">
+      {/* Left Side - Text */}
+      <div className="w-1/4 space-y-5"> {/* Decreased width of text section */}
+        <h1 className="text-6xl font-bold text-gray-900">New Collection</h1>
+        <p className="text-xl text-gray-600">
+          Discover the latest trends in fashion.
+        </p>
+        <button className="bg-black text-white px-8 py-3 rounded-full text-lg hover:bg-gray-800 transition duration-300">
+          Shop Now
+        </button>
+      </div>
+
+      {/* Right Side - Images */}
+      <div className="w-4/5 h-full flex gap-4"> {/* Increased width of image section */}
+        {/* Column 1 - Image 1 (Full Height) */}
+        <div className="w-1/3 h-full">
+          <img
+            src="model1.jpg"
+            alt="Fashion 1"
+            className="w-full h-full object-cover rounded-lg transition duration-300 hover:brightness-75 mt-0"
+          />
+        </div>
+
+        {/* Column 2 - Image 2 (Top) + Image 3 (Bottom) */}
+        <div className="w-1/3 h-full flex flex-col gap-4">
+          <div className="h-1/2">
+            <img
+              src="model2.jpg"
+              alt="Fashion 2"
+              className="w-full h-full object-cover rounded-lg transition duration-300 hover:brightness-75 mt-0"
+            />
           </div>
-          <div>
-            <div className="mt-10">
-              {/* Decorative image grid */}
-             
-              
-              <a
-                href="#"
-                className="inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-center font-medium text-white hover:bg-indigo-700"
-              >
-                Shop Collection
-              </a>
-            </div>
+          <div className="h-1/2">
+            <img
+              src="model3.jpg"
+              alt="Fashion 3"
+              className="w-full h-full object-cover rounded-lg transition duration-300 hover:brightness-75 mt-0"
+            />
+          </div>
+        </div>
+
+        {/* Column 3 - Image 4 (Top) + Image 5 (Bottom) */}
+        <div className="w-1/3 h-full flex flex-col gap-4">
+          <div className="h-2/3">
+            <img
+              src="model4.jpg"
+              alt="Fashion 4"
+              className="w-full h-full object-cover rounded-lg transition duration-300 hover:brightness-75 mt-0"
+            />
+          </div>
+          <div className="h-1/3">
+            <img
+              src="model5.jpg"
+              alt="Fashion 5"
+              className="w-full h-full object-cover rounded-lg transition duration-300 hover:brightness-75 mt-0"
+            />
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
+
 export default BannerOne;
