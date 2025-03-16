@@ -9,27 +9,27 @@ const FeaturedProductsList = () => {
   const staticProducts = [
     {
       id: 1,
-      imageUrl: '/AppleiMac 27.jpg',
+      imageUrl: '/iphone16.jpg',
     },
     {
       id: 2,
-      imageUrl: '/image1.jpg',
+      imageUrl: '/watch.jpg',
     },
     {
       id: 3,
-      imageUrl: '/image2.jpg',
+      imageUrl: '/shoes.jpg',
     },
     {
       id: 4,
-      imageUrl: '/image3.jpg',
+      imageUrl: '/vase.jpg',
     },
     {
       id: 5,
-      imageUrl: '/image4.jpg',
+      imageUrl: '/perfume.jpg',
     },
     {
       id: 6,
-      imageUrl: '/image5.jpg',
+      imageUrl: '/earrings.jpg',
     },
   ];
 
@@ -83,7 +83,7 @@ const FeaturedProductsList = () => {
         {products.map((product, index) => (
           <Link
             key={index}
-            to={`/product/${product.id}`} // Link to the product detail page
+            to={`/product/{product.id}`} // Link to the product detail page
             style={{
               textDecoration: "none", // Remove underline from the link
               display: "block", // Make the entire card a clickable block
@@ -141,10 +141,11 @@ const FeaturedProductsList = () => {
                 />
               </div>
               <h3 style={{ margin: "10px 0" }}>{product.name}</h3>
-              <p>${product.price}</p>
+              <p style={{ color: "#e65100" }}>NPR. {product.price}</p>
+
 
               {/* Static Star Rating Section */}
-              <div style={{ display: "flex", justifyContent: "center", marginTop: "10px" }}>
+              <div style={{ display: "flex", justifyContent: "center" }}>
                 {[1, 2, 3, 4, 5].map((star) => (
                   <span
                     key={star}
