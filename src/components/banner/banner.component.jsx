@@ -3,25 +3,20 @@ import Popup from "../popup/popup";
 import Popup1 from "../popup/popup1";
 import banner from "/banner.jpg";
 import { Link } from "react-router-dom";
+import AnimatedIntro from "../animation/AnimatedIntro";
 
 const HomeBanner = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [showPopup1, setShowPopup1] = useState(false);
 
   useEffect(() => {
-    // Show the first popup immediately
     setShowPopup(true);
-
-    // After 1 second, show the second popup
     const timeoutId = setTimeout(() => {
       setShowPopup1(true);
     }, 1000);
-
-    // Cleanup timeout on unmount
     return () => clearTimeout(timeoutId);
   }, []);
 
-  // Popup styles with transition for gradual appearance
   const popupStyle = {
     opacity: showPopup ? 1 : 0,
     transform: showPopup ? "translateY(0)" : "translateY(20px)",
@@ -31,40 +26,43 @@ const HomeBanner = () => {
   const popup1Style = {
     opacity: showPopup1 ? 1 : 0,
     transform: showPopup1 ? "translateY(0)" : "translateY(20px)",
-    transition: "opacity 1s ease 1s, transform 1s ease 1s", // Delayed transition for the second popup
+    transition: "opacity 1s ease 1s, transform 1s ease 1s",
   };
 
   return (
     <div
-      className="relative w-full h-screen bg-cover bg-center"
+      className="relative w-full h-screen bg-cover bg-center overflow-hidden"
       style={{
         backgroundImage: `url(${banner})`,
         backgroundPosition: "center 38%",
       }}
     >
+      {/* Animated Character + Arrow + Portfolio Card */}
+      <AnimatedIntro />
+      {/* Shop All Button */}
       <button
         style={{
           position: "absolute",
           bottom: "380px",
-          left: "200px", // Left position
+          left: "200px",
           padding: "10px 40px",
-          border: "2px solid black", // Black border
-          backgroundColor: "transparent", // Transparent background
-          color: "black", // Black text color
-          fontSize: "16px", // Font size
-          fontWeight: "bold", // Font weight
-          cursor: "pointer", // Pointer cursor on hover
-          transition: "background 0.7s ease, color 1.3s ease", // Smooth transition for background and text color
+          border: "2px solid black",
+          backgroundColor: "transparent",
+          color: "black",
+          fontSize: "16px",
+          fontWeight: "bold",
+          cursor: "pointer",
+          transition: "background 0.7s ease, color 1.3s ease",
         }}
         onMouseEnter={(e) => {
           e.target.style.background =
-            "linear-gradient(to right, #000000 4%, #2c3e50 100%)"; // Delayed gradient from black to a dark gray
-          e.target.style.color = "white"; // Change text to white
-        }} // Hover effect
+            "linear-gradient(to right, #000000 4%, #2c3e50 100%)";
+          e.target.style.color = "white";
+        }}
         onMouseLeave={(e) => {
-          e.target.style.background = "transparent"; // Reset background to transparent
-          e.target.style.color = "black"; // Reset text color to black
-        }} // Hover effect reset
+          e.target.style.background = "transparent";
+          e.target.style.color = "black";
+        }}
       >
         <Link
           to="/shop-all"
@@ -74,6 +72,7 @@ const HomeBanner = () => {
         </Link>
       </button>
 
+      {/* Two Popups on the Right */}
       <div
         style={{
           position: "absolute",
@@ -85,7 +84,6 @@ const HomeBanner = () => {
           gap: "20px",
         }}
       >
-        {/* Apply inline style for the gradual fade-in effect */}
         <div style={popupStyle}>{showPopup && <Popup />}</div>
         <div style={popup1Style}>{showPopup1 && <Popup1 />}</div>
       </div>
