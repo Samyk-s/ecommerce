@@ -13,8 +13,8 @@ const AnimatedIntro = () => {
       {/* Lottie animated character shooting arrow */}
       <motion.div
         initial={{ x: 0 }}
-        animate={{ x: 1 }}
-        transition={{ duration: 3 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 2 }}
         onAnimationComplete={() => setArrowShoot(true)}
         style={{
           position: "absolute",
