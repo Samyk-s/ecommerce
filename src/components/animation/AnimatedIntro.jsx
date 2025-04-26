@@ -98,7 +98,7 @@ const AnimatedIntro = () => {
                 style={{
                   position: "absolute",
                   top: "calc(25% + 10px)",
-                  left: "calc(60% + 50px)",
+                  left: "calc(60%)",
                   width: "6px",
                   height: "6px",
                   backgroundColor: "gold",
@@ -116,7 +116,7 @@ const AnimatedIntro = () => {
             className="absolute bg-white px-6 py-4 rounded-xl shadow-xl text-black pointer-events-auto"
             style={{
               top: "calc(25% - 25px)",
-              left: "calc(60% + 100px)",
+              left: "calc(60%)",
               zIndex: 20,
               boxShadow: "0 0 15px rgba(255,215,0,0.6)",
             }}
