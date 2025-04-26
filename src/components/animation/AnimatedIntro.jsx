@@ -1,12 +1,22 @@
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const AnimatedIntro = () => {
   const [arrowShoot, setArrowShoot] = useState(false);
   const [showCard, setShowCard] = useState(false);
+  const [fireworkTrigger, setFireworkTrigger] = useState(0);
 
   const fireworkParticles = [...Array(8).keys()];
+
+  useEffect(() => {
+    if (showCard) {
+      const interval = setInterval(() => {
+        setFireworkTrigger(prev => prev + 1);
+      }, 1000); // Fireworks every second
+      return () => clearInterval(interval);
+    }
+  }, [showCard]);
 
   return (
     <div className="absolute bottom-0 left-0 w-full h-full z-10 pointer-events-none">
@@ -20,13 +30,13 @@ const AnimatedIntro = () => {
           position: "absolute",
           bottom: "100px",
           left: "0",
-          width: "200px", // you can adjust size
+          width: "200px",
           height: "200px",
           pointerEvents: "none",
         }}
       >
         <DotLottieReact
-          src="/arrow.lottie" // Make sure file is inside /public/arrow.lottie
+          src="/arrow.lottie"
           autoplay
           loop
         />
@@ -37,7 +47,7 @@ const AnimatedIntro = () => {
         <motion.div
           initial={{ x: 210, y: -100 }}
           animate={{ x: 280, y: -280 }}
-          transition={{ duration: 0 }}
+          transition={{ duration: 1 }}
           onAnimationComplete={() => setShowCard(true)}
           style={{
             position: "absolute",
@@ -61,24 +71,24 @@ const AnimatedIntro = () => {
 
             return (
               <motion.div
-                key={i}
+                key={`${fireworkTrigger}-${i}`} // unique key to retrigger animation
                 initial={{ x: 0, y: 0, opacity: 1 }}
                 animate={{ x, y, opacity: 0 }}
-                transition={{ duration: 0.8 }}
+                transition={{ duration: 1 }}
                 style={{
                   position: "absolute",
                   top: "calc(69% + 10px)",
                   left: "calc(13%)",
                   width: "6px",
                   height: "6px",
-                  backgroundColor: "red",
+                  backgroundColor: "gold",
                   borderRadius: "50%",
                 }}
               />
             );
           })}
 
-          {/* Firework-like popup card */}
+          {/* Popup card */}
           <motion.div
             initial={{ scale: 0.1, opacity: 0, rotate: 90 }}
             animate={{ scale: 1, opacity: 1, rotate: 0 }}
