@@ -1,3 +1,4 @@
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
@@ -8,57 +9,26 @@ const AnimatedIntro = () => {
   const fireworkParticles = [...Array(8).keys()];
 
   return (
-    <div className="absolute bottom-0 left-0 w-full h-full z-10">
-      {/* Stickman running */}
+    <div className="absolute bottom-0 left-0 w-full h-full z-10 pointer-events-none">
+      {/* Lottie animated character shooting arrow */}
       <motion.div
-        className="stickman"
-        initial={{ x: -100, y: -100 }}
-        animate={{ x: 200, y: -100 }}
-        transition={{ duration: 5 }}
+        initial={{ x: 0 }}
+        animate={{ x: 1 }}
+        transition={{ duration: 3 }}
         onAnimationComplete={() => setArrowShoot(true)}
-        style={{ position: "absolute", bottom: "120px", left: "0" }}
+        style={{
+          position: "absolute",
+          bottom: "100px",
+          left: "0",
+          width: "200px", // you can adjust size
+          height: "200px",
+          pointerEvents: "none",
+        }}
       >
-        {/* Head */}
-        <div
-          style={{
-            width: "20px",
-            height: "20px",
-            borderRadius: "50%",
-            border: "2px solid black",
-            marginBottom: "4px",
-            background: "white",
-          }}
-        />
-        {/* Body */}
-        <div
-          style={{
-            width: "2px",
-            height: "30px",
-            backgroundColor: "black",
-            margin: "0 auto",
-          }}
-        />
-        {/* Arms */}
-        <div
-          style={{
-            width: "30px",
-            height: "2px",
-            backgroundColor: "black",
-            transform: "translate(-50%, -15px)",
-            position: "relative",
-            left: "50%",
-          }}
-        />
-        {/* Legs */}
-        <div
-          style={{
-            width: "30px",
-            height: "2px",
-            backgroundColor: "black",
-            transform: "translate(-50%, 15px) rotate(45deg)",
-            position: "relative",
-            left: "50%",
-          }}
+        <DotLottieReact
+          src="/arrow.lottie" // Make sure file is inside /public/arrow.lottie
+          autoplay
+          loop
         />
       </motion.div>
 
@@ -67,7 +37,7 @@ const AnimatedIntro = () => {
         <motion.div
           initial={{ x: 210, y: -100 }}
           animate={{ x: 280, y: -280 }}
-          transition={{ duration: 1 }}
+          transition={{ duration: 0 }}
           onAnimationComplete={() => setShowCard(true)}
           style={{
             position: "absolute",
@@ -82,7 +52,7 @@ const AnimatedIntro = () => {
       {/* Firework popup */}
       {showCard && (
         <>
-          {/* Sparkle particles (burst effect) */}
+          {/* Firework particles */}
           {fireworkParticles.map((_, i) => {
             const angle = (i * 360) / fireworkParticles.length;
             const radius = 60;
@@ -97,11 +67,11 @@ const AnimatedIntro = () => {
                 transition={{ duration: 0.8 }}
                 style={{
                   position: "absolute",
-                  top: "calc(25% + 10px)",
-                  left: "calc(60%)",
+                  top: "calc(69% + 10px)",
+                  left: "calc(13%)",
                   width: "6px",
                   height: "6px",
-                  backgroundColor: "gold",
+                  backgroundColor: "red",
                   borderRadius: "50%",
                 }}
               />
@@ -115,8 +85,8 @@ const AnimatedIntro = () => {
             transition={{ type: "spring", stiffness: 500, damping: 20 }}
             className="absolute bg-white px-6 py-4 rounded-xl shadow-xl text-black pointer-events-auto"
             style={{
-              top: "calc(25% - 25px)",
-              left: "calc(60%)",
+              top: "calc(69% - 25px)",
+              left: "calc(13%)",
               zIndex: 20,
               boxShadow: "0 0 15px rgba(255,215,0,0.6)",
             }}
